@@ -2,6 +2,10 @@ import axios from 'axios';
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || (import.meta.env.PROD ? 'https://genai-powered-enterprise-compliance.onrender.com/api' : '/api');
 
+// Set axios defaults so all API calls reach the Render backend in production
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL?.replace('/api', '') || (import.meta.env.PROD ? 'https://genai-powered-enterprise-compliance.onrender.com' : '');
+
+
 export const api = {
   // Auth
   login: (email, password) => axios.post(`${API_BASE}/auth/login`, { email, password }),
