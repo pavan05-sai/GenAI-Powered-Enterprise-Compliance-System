@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F7F5F0;
+    color: #1A1918;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom Scrollbar for Enterprise Feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0ECE1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D5CEBD;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C59B27;
+}
+
+.veritas-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E6E2D8;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.04), 0 1px 4px -1px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease-in-out;
+}
+
+.veritas-card:hover {
+  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.06);
+}
+
+/* Animation utilities */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
