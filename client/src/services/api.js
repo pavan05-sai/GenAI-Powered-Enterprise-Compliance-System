@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || (import.meta.env.PROD ? 'https://genai-powered-enterprise-compliance.onrender.com/api' : '/api');
 
 export const api = {
   // Auth
