@@ -1,0 +1,31 @@
+{
+  "name": "compliancegraph-server",
+  "version": "1.0.0",
+  "description": "ComplianceGraph AI Backend Server with Express, MongoDB, Neo4j & Graph RAG",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node src/server.js",
+    "seed": "node src/utils/seedData.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mammoth": "^1.9.0",
+    "mongoose": "^8.9.3",
+    "multer": "^1.4.5-lts.1",
+    "neo4j-driver": "^5.27.0",
+    "pdf-parse": "^1.1.1",
+    "uuid": "^11.0.5",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
